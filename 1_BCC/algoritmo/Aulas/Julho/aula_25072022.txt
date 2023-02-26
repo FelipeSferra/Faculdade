@@ -1,0 +1,52 @@
+//
+// Criado por Felipe Sferra de Oliveira
+// RA: 2211600147 
+// Data: 25/07/2022.
+//
+-----------------------------------------------------------------------------------------------
+BASE:
+#Mapa = [0,1,1,0
+         0,0,1,0    -> Matriz das estradas que ligam as cidades
+         1,0,0,1
+         0,0,1,0]
+#VCid [Assis,CM,Tarumã,PP] -> Vetor das cidades
+
+-----------------------------------------------------------------------------------------------
+Algoritmo Cidade_0;
+CONST
+    T=4;
+VAR
+    vCid: Vetor [T] de texto [30];
+    Mapa: Matriz [T] [T] de inteiros;
+    i,j:inteiros;
+INICIO
+    PARA (i<-0;i<T;i++)
+        FAÇA LEIA vCid [i];
+
+    PARA (i<-0;i<T;i++)
+        FAÇA{PARA (j<-0;j<T;j++)
+             FAÇA LEIA Mapa [i] [j];
+             }
+FIM.
+
+-----------------------------------------------------------------------------------------------
+Algoritmo Cidade_1;
+VAR
+ k, qtdchg, qtdsai: inteiros;
+INICIO
+    LEIA k;
+
+    qtdchg <- 0;
+    PARA (i <- 0; i < T; i++)
+        FAÇA{ SE (mapa [i] [k] = 1)
+                ENTÃO qtdchg++;
+            }
+
+    qtdsai <- 0;
+    PARA (i <- 0; i < T; i++)
+        FAÇA{ SE (mapa [k] [i] = 1)
+                ENTÃO qtdsai++;
+            }
+
+    IMPRIMA qtdsai,qtdchg;
+FIM.

@@ -1,0 +1,47 @@
+<- |- Continuação do dia 17/10/2022 -| ->
+4)Imprimir a lista;
+5)Procurar um valor;
+
+Algoritmo LLL_05_BSC_INFO;
+VAR
+    INFO: texto[50];
+    BSC: * NOLLL;
+INICIO
+    SE(IL!=NIL)
+        ENTÃO{ LEIA INFO;
+               BSC <- IL;
+               ENQUANTO (*BSC.Prox!=NIL E *BSC.Prox!=INFO)
+                    FAÇA BSC <- *BSC.Prox;
+               SE(*BSC.INFO == INFO)
+                    ENTÃO IMPRIMA *BSC.ID,*BSC.INFO;
+                    SENÃO IMPRIMA INFO, "não pertence a lista";
+        }
+        SENÃO IMPRIMA "Lista Vazia";
+FIM.
+
+6)Procurar um nó e inserir novo nó na próxima posição;
+
+INICIO
+    SE(IL!=NIL)
+        ENTÃO{ LEIA INFO;
+               BSC <- IL;
+               ENQUANTO (*BSC.Prox!=NIL E *BSC.Prox!=INFO)
+                    FAÇA BSC <- *BSC.Prox;
+               SE(*BSC.INFO == INFO)
+                    ENTÃO{ ALOCA(AUX);
+                        SE(AUX!=NIL)
+                            ENTÃO{ LEIA *AUX.ID, *AUX.INFO, Conf;
+                                   SE(CONF == "S")
+                                       ENTÃO{ *AUX.Prox <- *BSC.Prox;
+                                            *BSC.Prox <- AUX;
+                                            SE(BSC==FL)
+                                                ENTÃO FL <- AUX;
+                                       }
+                                       SENÃO IMPRIMA "Dados não confirmados!;
+                            }
+                            SENÃO IMPRIMA "Overflow";
+                    }
+                    SENÃO IMPRIMA INFO, "não pertence a lista";
+        }
+        SENÃO IMPRIMA "Lista Vazia";
+FIM.

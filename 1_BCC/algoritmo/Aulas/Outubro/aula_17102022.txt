@@ -1,0 +1,79 @@
+<- |- Continuação do dia 03/10/2022 -| ->
+
+=> Ponteiro não é uma variavel que recebe um valor, mas sim uma variavel que indica uma região da memoria que tem um valor
+
+------------------/------------------/------------------/------------------
+
+1) Inserir 1° Nó na lista:
+
+Algoritmo LLL_01_INS_PRIMEIRO;
+
+INICIO
+    SE(IL = NIL)
+        ENTÃO{
+            ALOCA(AUX); //Função ALOCA 
+            SE(AUX != NIL){
+                LEIA *AUX.ID, *AUX.Info, CONF;
+                SE (CONF = "S")
+                ENTÃO {
+                    IL <- AUX;
+                    FL <- AUX;
+                    *AUX.Prox <- NIL;
+                }
+                SENÃO IMPRIMA "Dados não confirmados";
+            }
+            SENÃO IMPRIMA "Overflow - Memoria Insuficiente";
+        }
+    SENÃO IMPRIMA "Lista já possui nós";
+FIM. 
+
+------------------/------------------/------------------/------------------
+
+2) Inserir Inicio da Lista:
+
+Algoritmo LLL_02_INS_INICIO;
+
+INICIO
+    SE(IL != NIL)
+        ENTÃO{
+            ALOCA(AUX);
+            SE(AUX != NIL)
+                ENTÃO{
+                    LEIA *AUX.ID, *AUX.Info, CONF;
+                    SE(CONF = "S")
+                    ENTÃO {
+                        *AUX.Prox <- IL;
+                        IL <- AUX;
+                    }
+                    SENÃO IMPRIMA "Dados não confirmados";
+                }
+            SENÃO IMPRIMA "Overflow - Memoria Insuficiente";
+        }
+    SENÃO LLL_01_INS_PRIMEIRO();
+FIM.
+
+------------------/------------------/------------------/------------------
+    
+3) Inserir Fim da Lista;
+
+Algoritmo LLL_03_INS_FIM;
+
+INICIO
+    SE(IL != NIL)
+        ENTÃO{
+            ALOCA(AUX);
+            SE(AUX != NIL)
+                ENTÃO{
+                    LEIA *AUX.ID, *AUX.Info, CONF;
+                    SE(CONF = "S")
+                        ENTÃO{
+                            *AUX.Prox <- NIL;
+                            *FL.Prox <- AUX;
+                            FL <- AUX;
+                        }
+                    SENÃO IMPRIMA "Dados não confirmados";
+                }
+            SENÃO IMPRIMA "Overflow - Memoria Insuficiente";    
+        }
+    SENÃO LLL_01_INS_PRIMEIRO();
+    

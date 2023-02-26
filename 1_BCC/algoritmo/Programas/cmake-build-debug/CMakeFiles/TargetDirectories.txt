@@ -1,0 +1,4 @@
+C:/Faculdade/algoritmo/Programas/cmake-build-debug/CMakeFiles/algoritmos.dir
+C:/Faculdade/algoritmo/Programas/cmake-build-debug/CMakeFiles/testes.dir
+C:/Faculdade/algoritmo/Programas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Faculdade/algoritmo/Programas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

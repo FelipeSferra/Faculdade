@@ -1,0 +1,22 @@
+=> Fila sequencial é uma estrutura onde toda nova informação é adicionada no final.
+=> Fila e pilha tem restrição de acesso aos dados, lista é possível inserir os dados em qualquer espaço livre.
+=> Pilha a inserção de novas informações entra no "topo" da pilha e sempre faz a leitura de dados (remoção) do "topo".
+=> Quando iniciamos a Pilha, o topo começa com o valor de -1 sendo uma pilha vazia.
+=> POP -> remove informação (desempilhar) / PUSH -> insere informação (empilhar).
+=> Algoritmo de Lista -> FIFO (First In First Out).
+=> Algoritmo de Pilha -> LIFO (Last In First Out).
+=> Exemplo:
+M=4;
+
+3 |  8 |  FLA | -> TOPO (último a ser inserido / primeiro a ser removido)
+2 | 14 |  PAL |
+1 |  6 |  COR |
+0 | 10 | SPFC |
+
+
+Algoritmos de Pilha:
+0) Definição e iniciação
+1) PUSH: Inserir um novo nó (empilhar)
+2) POP: Remover nó (desempilhar)
+3) Verificar situação do topo (imprimir qual é o valor do último nó e a localização)
+4) Imprimir conteúdo da pilha

@@ -1,0 +1,106 @@
+Algoritmo senador_a;
+TIPO 
+    SENADOR = estrutura {
+        id: inteiros;
+        nome: texto [30];
+        idade: inteiros;
+        partido: texto[20];
+    }
+CONST
+    M=10;
+VAR 
+    lst: arranjo [M] de SENADOR;
+    val: SENADOR;
+    aux,final: inteiros;
+    conf: caracter;
+    sinal: lógico;
+INICIO
+    final <- -1;
+
+FIM.
+
+---------------------/---------------------/---------------------
+
+Algoritmo senador_b;
+
+VAR
+    bsc: texto[30];
+INICIO
+    sinal <- F;
+    SE (final > -1)
+        ENTÃO{
+            LEIA info;
+            bsc <- 0;
+            ENQUANTO (lst[bsc].nome != info E bsc != final)
+                FAÇA bsc++; //bsc <- bsc + 1;
+            SE (lst[bsc].nome = info)
+                ENTÃO{
+                    bsc--; //bsc <- bsc - 1;
+                    SE (bsc > -1)
+                        ENTÃO{
+                            val <- lst[bsc];
+                            IMPRIMA val.id, val.nome, val.idade, val.partido;
+                            LEIA conf;
+                            SE (conf = "S")
+                            ENTÃO{
+                                ENQUANTO (bsc != final)
+                                    FAÇA{
+                                        lst[bsc] <- lst[bsc + 1];
+                                        bsc++; 
+                                    }
+                                final--;
+                                sinal <- V;
+                            }
+                            SENÃO IMPRIMA "Remoção não confirmada";
+                        }
+                        SENÃO IMPRIMA "Não há nó anterior";
+            }
+            SENÃO IMPRIMA "Info não pertence a lista";
+        }
+    SENÃO IMPRIMA "Lista vazia";
+FIM.
+
+---------------------/---------------------/---------------------
+
+Algoritmo senador_c;
+
+VAR
+    soma: inteiros;
+    media: reais;
+INICIO
+    sinal <- F;
+    SE (final != -1)
+        ENTÃO{
+            soma <- 0;
+            aux <- 0;
+            ENQUANTO (aux <= final)
+                FAÇA{
+                    soma <- soma + lst[aux].idade;
+                    aux++;
+                }
+            media <- soma / aux;
+            IMPRIMA media;
+            sinal <- V;
+        }
+    SENÃO IMPRIMA "Lista vazia";
+FIM.
+
+---------------------/---------------------/---------------------
+
+Algoritmo InsereFilaCircular;
+
+INICIO
+    sinal <- F;
+    SE ((FF+1)%TAM != IF) //(FF+1)%TAM resto da divisão para saber se tem espaço na fila
+        ENTÃO{
+            LEIA val.id, val.info, conf;
+            SE (conf = "S")
+                ENTÃO{
+                    FF <- (FF+1)%TAM;
+                    fila[FF] <- val;
+                    sinal <- V;
+                }
+                SENÃO IMPRIMA "Dado não confirmado";
+        }
+        SENÃO IMPRIMA "Fila cheia";
+FIM.

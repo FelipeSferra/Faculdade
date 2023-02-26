@@ -1,0 +1,42 @@
+Algoritmo LMat_3;
+
+CONST
+    T1=2;
+    T2=4;
+VAR
+    mat: arranjo [T1] [T2] de inteiros;
+    tra: arranjo [T2] [T1] de inteiros;
+    i,j:inteiros;
+INICIO
+    PARA (i<-0;i<T1;i++)
+        FAÇA {PARA (j<-0;j<T2;j++)
+                    FAÇA{LEIA mat [i] [j];
+                         tra [j] [i] <- mat [i] [j];
+                         }
+             }
+FIM.
+
+__________________________________________________________________________________
+
+Algoritmo CalMaiorMenorVetor;
+
+CONST
+    T=5;
+VAR
+    vet:vetor[T] de inteiros;
+    i,imn,imr,menor,maior:inteiros;
+INICIO
+    PARA(i<-0;i<T;i++)
+        FAÇA LEIA vet[i];
+    maior <- -999999999999999999;
+    menor <-  999999999999999999;
+    PARA(i <- 0; i<T;i++)
+        FAÇA{ SE(vet[i] > maior)
+                ENTÃO { maior <- vet[i];
+                        imr <- i;
+                      }
+              SE(vet[i] < menor)
+                ENTÃO { menor <- vet[i];
+                        imn <- i;
+                       }
+FIM.

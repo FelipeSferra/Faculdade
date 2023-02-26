@@ -1,0 +1,34 @@
+Algoritmo Lista_4;
+CONST
+    m = 5;
+    n = 5;
+VAR
+    i,j,venc,l: inteiros;
+    mEleicao: matriz [m] [n] de inteiros;
+    vSoma: vetor [m] de inteiros;
+    vCand: vetor [m] de inteiros;
+INICIO
+venc <- 0;
+i <- 0;
+    PARA (i<-0;i<m;i++)
+        FAÇA{
+            LEIA vCand [i];
+        }
+    PARA (i<-0;i<m;i++)
+        FAÇA{PARA (j<-0;j<n;j++)
+                FAÇA{
+                    SE(j=0)
+                    ENTÃO vSoma[i] <- 0;
+                    LEIA mEleicao [i][j];
+                    vSoma[i] <- vSoma [i] + mEleicao [i][j];
+                }
+                SE(vSoma[i] > venc)
+                    ENTÃO venc <- vSoma[i];
+                          l <- i;
+        }
+
+    PARA (i<-0;i<m;i++)
+        FAÇA{
+            IMPRIMA vSoma [i];
+        }
+    IMPRIMA vCand[l], vSoma[l];

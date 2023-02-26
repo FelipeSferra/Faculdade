@@ -1,0 +1,54 @@
+<- |- Listas Ligadas -| ->
+* Desenhos no caderno *
+
+=> NIL (Nothing In List).
+=> IL -> inicio da lista e começa com o valor NIL.
+=> EL -> Endereços livres.
+=> AUX
+=> CONF
+=> FIM
+=> Exemplo lista ligada:
+
+ IL -> E50 <- AUX (IL = E50 && AUX = E50)
+----|-------|-------|
+  6 | Pera  |  E100 |
+----|-------|-------|
+
+----|-------|-------|
+ 15 | Manga |  NIL -|-> Próximo
+----|-------|-------|
+
+        0       1
+    |-------|-------|
+ 0  |   6   |   15  |  -> ID
+    |-------|-------|
+ 1  | Pera  | Manga |  -> INFO
+    |-------|-------|
+
+    FIM = 1
+    VAR -> ID = 15
+       |-> INFO = Manga
+    CONF = S
+
+=> Sistema operacional implementa algoritmo de Pilha para manusear memória livre no sistema para a adição de informação,
+ou seja, se excluirmos um nó que aloca o endereço E100 ele voltara para pilha e já será usado novamente caso preciso.
+
+
+=> Algoritmos Lista Ligada:
+* -> ponteiro
+
+0) Definição e iniciação:
+
+Algoritmo LLL_0;
+Tipo
+    NOLLL: Estrutura { ID: Inteiros;
+                       Info: Texto [30];
+                       Prox: * NOLLL;
+                     }
+Var
+    IL,FL,AUX: * NOLLL;
+    CONF: caracter;
+Inicio
+    IL <- NIL;
+    FL <- NIL;
+Fim.

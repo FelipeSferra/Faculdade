@@ -1,0 +1,13 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Faculdade\algoritmo\Programas -B C:\Faculdade\algoritmo\Programas\cmake-build-debug
+-- Configuring done
+CMake Error at CMakeLists.txt:8 (add_executable):
+  Cannot find source file:
+
+    controleAdega.cpp
+
+
+CMake Error at CMakeLists.txt:8 (add_executable):
+  No SOURCES given to target: testes
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

@@ -1,0 +1,34 @@
+Algoritmo LLS_0_DefIni;
+
+TIPO
+    NOLLS: estrutura { id: inteiros
+                       info: texto [30]
+                     };
+CONST
+    N=10;
+VAR
+    lst = arranjo [N] de NOLLS;
+    final,aux: inteiros;
+    val:NOLLS;
+    sinal: lógicos;
+INICIO
+    final <- -1;
+FIM.
+----------------------------------------------------------------------------------------------
+Algoritmo LLS_01_InsIni;
+
+INICIO
+    sinal <- F; //falso
+    SE (final != N-1)
+        ENTÃO{
+               LEIA val.id, val.info, conf;
+               SE (conf = 'S')
+                   ENTÃO {
+                            final++;
+                            lst [final] <- val;
+                            sinal <- V;
+                          }
+                   SENÃO IMPRIMA "Dados não confirmados...";
+             }
+        SENÃO IMPRIMA "Overflow - Lista Cheia";
+FIM.
