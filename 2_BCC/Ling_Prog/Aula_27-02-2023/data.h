@@ -18,7 +18,7 @@ class data{
 
     void setDia(int dia) {this->dia = dia;}
     void setMes(int mes) {this->mes = mes;}
-    void setAno(int ano) {this->ano = ano; }
+    void setAno(int ano) {this->ano = ano;}
 
     void ler();
     void imprimir();
