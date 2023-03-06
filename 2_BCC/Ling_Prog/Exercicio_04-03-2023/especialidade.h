@@ -79,8 +79,8 @@ void especialidade::ler(){
     especialidade(id,descricao,qtd);
 }
 
-//func para testar se é string ou não, vai ser usado na leitura da descrição
-//um problema é se caso colocar um número antes da string
+//func para testar se é string ou não, vai ser usado na leitura da descrição;
+//um problema é se caso colocar um número antes da string a função retornará true e será considerada um inteiro;
 bool is_string(string str) {
     for (int i = 0; i < str.length(); i++){
         if (isdigit(str[i]) == false){
