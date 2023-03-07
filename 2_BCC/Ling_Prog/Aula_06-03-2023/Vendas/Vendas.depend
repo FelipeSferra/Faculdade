@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1678145382 source:c:\faculdade\2_bcc\ling_prog\vendas\main.cpp
+	<iostream>
+	<locale.h>
+	"Estado.h"
+	"Imprimir.h"
+
+1678145426 c:\faculdade\2_bcc\ling_prog\vendas\estado.h
+
+1678144612 c:\faculdade\2_bcc\ling_prog\vendas\imprimir.h
+
