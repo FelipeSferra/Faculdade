@@ -68,7 +68,7 @@ void Tarefa::ler(){
     cin >> qtdeTrabalhada;
 
     setId(id);
-    setDesc(descrica);
+    setDesc(descricao);
     setTipo(tipo);
     setVlrHr(vlrHora);
     setQtdTrab(qtdeTrabalhada);

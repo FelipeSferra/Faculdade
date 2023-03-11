@@ -55,7 +55,7 @@ void Servico::imprimir(){
     cout << "Tarefa: " << getTrf() << endl;
     cout << "Horas Trabalhadas: " << getHrsTrab() << endl;
     cout << "Valor da Hora: " << getVlrHr() << endl;
-    cout << "Status: " << getStatus();
+    cout << "Status: " << getStatus() << endl;
 }
 
 void Servico::ler(){
