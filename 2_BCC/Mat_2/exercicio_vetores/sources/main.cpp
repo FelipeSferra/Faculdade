@@ -18,6 +18,10 @@ using namespace std;
 #endif
 
 int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    cout << fixed << setprecision(3);
+
     Vetores A;
     lerVet(A);
     
