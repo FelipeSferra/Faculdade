@@ -109,6 +109,7 @@ void menuMulti(Vetores &vet1, Vetores &vet2, Vetores &vet3){
 
     while(op!='0'){
         system("cls");
+        
         cout << "\n\tMenu - Opções Multiplicação\n\n";
         separacao();
         cout << "\n\n[01] Resultado da multiplicação entre " << K << " e o vetor A\n";

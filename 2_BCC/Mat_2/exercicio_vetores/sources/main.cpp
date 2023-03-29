@@ -18,18 +18,21 @@ using namespace std;
 #endif
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL,"Portuguese");
 
     cout << fixed << setprecision(3);
 
     Vetores A;
+    cout << "\n\tLeitura do vetor A\n\n";
     lerVet(A);
-    
+
     Vetores B;
+    cout << "\n\tLeitura do vetor B\n\n";
     lerVet(B);
 
     Vetores C;
+    cout << "\n\tLeitura do vetor C\n\n";
     lerVet(C);
 
     mainMenu(A,B,C);
-} 
+}

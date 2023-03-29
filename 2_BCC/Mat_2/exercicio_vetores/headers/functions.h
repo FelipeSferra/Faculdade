@@ -8,9 +8,6 @@
 #endif
 
 void lerVet(Vetores &vetor){
-    system("cls");
-    cout << "\n\tLeitura do vetor\n\n";
-    
     float x,y,z;
 
     cout << "Insira o valor de X: ";
@@ -23,6 +20,8 @@ void lerVet(Vetores &vetor){
     vetor.setX(x);
     vetor.setY(y);
     vetor.setZ(z);
+
+    system("cls");
 }
 
 void imprimirSoma(Vetores result){
