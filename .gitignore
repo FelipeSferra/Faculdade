@@ -35,3 +35,6 @@
 *.pdf
 *.doc
 *.rar
+*.zip
+*.xml
+.idea/
