@@ -48,6 +48,7 @@ void imprimir(var *valores, int cont,float erro){
    
 	cout << "\t\tImpressão de Iterações\n\n";
 	cout << "Valor de erro utilizado no cálculo " << erro << endl;
+    
 	for(int i = 1; i < cont; i++){
     	cout << "\n" << i << "ª Iteração | K = " << (i-1) << ": " << endl;
         cout << "\nX["<< i << "]= " << valores[i].x << endl;
@@ -72,10 +73,6 @@ void calcular(var *valores, int &cont, float erro){
         ErY = (float)CalcEr(valores[i].x,valores[i-1].x);
         ErZ = (float)CalcEr(valores[i].x,valores[i-1].x);
         
-        cout << ErX << endl;
-        cout << ErY << endl;
-        cout << ErZ << endl;
-
         if(ErX <= erro){
         	if(ErY <= erro){
             	if(ErZ <= erro){
@@ -83,7 +80,6 @@ void calcular(var *valores, int &cont, float erro){
                 }
             }
         }
-
     }
     cont = i;
 }
